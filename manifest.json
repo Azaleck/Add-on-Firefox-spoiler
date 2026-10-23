@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Hide Progress",
+  "version": "1.3",
+  "description": "Stop getting spoiled by youtube video timers.",
+  "browser_specific_settings": {
+    "gecko": { "id": "youtube-hide-progress@local" }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "css": ["hide.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

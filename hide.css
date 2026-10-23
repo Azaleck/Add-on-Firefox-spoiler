@@ -1,0 +1,25 @@
+/* Progress bar (seek bar, chapters, preview tooltip) */
+.ytp-progress-bar-container,
+.ytp-tooltip,
+.ytp-chapter-container {
+  display: none !important;
+}
+
+/* Time display "1:23 / 10:45" */
+.ytp-time-display {
+  display: none !important;
+}
+
+/* Thumbnails (search, home, recommendations): duration badge and red "already watched" bar */
+ytd-thumbnail-overlay-time-status-renderer,
+ytd-thumbnail-overlay-resume-playback-renderer,
+yt-thumbnail-overlay-badge-view-model,
+yt-thumbnail-overlay-progress-bar-view-model,
+yt-thumbnail-bottom-overlay-view-model,
+yt-thumbnail-badge-view-model,
+.yt-badge-shape--thumbnail-default,
+.badge-shape-wiz--thumbnail-default,
+ytd-thumbnail badge-shape,
+yt-thumbnail-view-model badge-shape {
+  display: none !important;
+}
