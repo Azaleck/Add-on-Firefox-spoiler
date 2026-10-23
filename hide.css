@@ -1,25 +1,52 @@
+/* Every rule is skipped when the toolbar button adds .yhp-off to <html> */
+
 /* Progress bar (seek bar, chapters, preview tooltip) */
-.ytp-progress-bar-container,
-.ytp-tooltip,
-.ytp-chapter-container {
+html:not(.yhp-off) .ytp-progress-bar-container,
+html:not(.yhp-off) .ytp-tooltip,
+html:not(.yhp-off) .ytp-chapter-container {
   display: none !important;
 }
 
 /* Time display "1:23 / 10:45" */
-.ytp-time-display {
+html:not(.yhp-off) .ytp-time-display {
   display: none !important;
 }
 
 /* Thumbnails (search, home, recommendations): duration badge and red "already watched" bar */
-ytd-thumbnail-overlay-time-status-renderer,
-ytd-thumbnail-overlay-resume-playback-renderer,
-yt-thumbnail-overlay-badge-view-model,
-yt-thumbnail-overlay-progress-bar-view-model,
-yt-thumbnail-bottom-overlay-view-model,
-yt-thumbnail-badge-view-model,
-.yt-badge-shape--thumbnail-default,
-.badge-shape-wiz--thumbnail-default,
-ytd-thumbnail badge-shape,
-yt-thumbnail-view-model badge-shape {
+html:not(.yhp-off) ytd-thumbnail-overlay-time-status-renderer,
+html:not(.yhp-off) ytd-thumbnail-overlay-resume-playback-renderer,
+html:not(.yhp-off) yt-thumbnail-overlay-badge-view-model,
+html:not(.yhp-off) yt-thumbnail-overlay-progress-bar-view-model,
+html:not(.yhp-off) yt-thumbnail-bottom-overlay-view-model,
+html:not(.yhp-off) yt-thumbnail-badge-view-model,
+html:not(.yhp-off) .yt-badge-shape--thumbnail-default,
+html:not(.yhp-off) .badge-shape-wiz--thumbnail-default,
+html:not(.yhp-off) ytd-thumbnail badge-shape,
+html:not(.yhp-off) yt-thumbnail-view-model badge-shape {
   display: none !important;
+}
+
+/* Jump buttons added by jump.js, only shown when hiding is on */
+html.yhp-off .yhp-jump {
+  display: none !important;
+}
+.yhp-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 100%;
+  vertical-align: top;
+  margin-left: 8px;
+}
+.yhp-jump button {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font: 500 13px Roboto, Arial, sans-serif;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+.yhp-jump button:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
