@@ -4,7 +4,10 @@
   "version": "1.4",
   "description": "Stop getting spoiled by youtube video timers.",
   "browser_specific_settings": {
-    "gecko": { "id": "youtube-hide-progress@local" }
+    "gecko": {
+      "id": "youtube-hide-progress@local",
+      "data_collection_permissions": { "required": ["none"] }
+    }
   },
   "permissions": ["storage"],
   "background": {
