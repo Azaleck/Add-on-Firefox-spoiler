@@ -25,7 +25,7 @@
     {
       "matches": ["*://*.youtube.com/*"],
       "css": ["hide.css"],
-      "js": ["toggle.js", "jump.js"],
+      "js": ["toggle.js", "jump.js", "thumbtime.js"],
       "run_at": "document_start"
     }
   ]

@@ -26,6 +26,23 @@ html:not(.yhp-off) yt-thumbnail-view-model badge-shape {
   display: none !important;
 }
 
+/* Hover preview on thumbnails: the inline player has its own bar and countdown,
+   with class names YouTube keeps renaming, so match by name fragment */
+html:not(.yhp-off) :is(ytd-video-preview, #video-preview, .ytp-inline-preview-mode, ytd-thumbnail, yt-thumbnail-view-model, yt-lockup-view-model)
+  :is([class*="progress" i], [id*="progress" i], [class*="time-status" i], [class*="timestatus" i], [class*="time-display" i], [class*="scrubber" i]) {
+  display: none !important;
+}
+
+/* Total time badge in the hover preview player */
+html:not(.yhp-off) :is(ytd-video-preview, #video-preview, .ytp-inline-preview-mode) :is(badge-shape, [class*="badge" i]) {
+  display: none !important;
+}
+
+/* Times found by thumbtime.js */
+html:not(.yhp-off) .yhp-time {
+  display: none !important;
+}
+
 /* Jump buttons added by jump.js, only shown when hiding is on */
 html.yhp-off .yhp-jump {
   display: none !important;
