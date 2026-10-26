@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "YouTube Hide Progress",
-  "version": "1.4",
+  "version": "1.5",
   "description": "Stop getting spoiled by youtube video timers.",
   "browser_specific_settings": {
     "gecko": {
